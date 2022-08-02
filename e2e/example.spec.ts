@@ -1,27 +1,28 @@
 import { test, expect } from '@playwright/test';
-import { isContext } from 'vm';
 
-test('homepage has Playwright in title and get started link linking to the intro page', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+// test('homepage has Playwright in title and get started link linking to the intro page', async ({ page }) => {
+//   await page.goto('https://playwright.dev/');
 
-  // create a locator
-  const getStarted = page.locator('text=Get Started');
+//   // Expect a title "to contain" a substring.
+//   await expect(page).toHaveTitle(/Playwright/);
 
-  // Expect an attribute "to be strictly equal" to the value.
-  await expect(getStarted).toHaveAttribute('href', '/docs/intro');
+//   // create a locator
+//   const getStarted = page.locator('text=Get Started');
 
-  // Click the get started link.
-  await getStarted.click();
+//   // Expect an attribute "to be strictly equal" to the value.
+//   await expect(getStarted).toHaveAttribute('href', '/docs/intro');
 
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
-});
+//   // Click the get started link.
+//   await getStarted.click();
 
-test('fail', async ({ page }) => {
-  await isContext.tracing.start({screenshots: true, snapshots: true});
+//   // Expects the URL to contain intro.
+//   await expect(page).toHaveURL(/.*intro/);
+// });
+
+test('fail', async ({ page,  }) => {
+  
+  await .tracing.start({screenshots: true, snapshots: true});
   // Go to https://www.timocom.de/
   await page.goto('https://www.timocom.de/');
   // Click [aria-label="Verweigern"]
