@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { isContext } from 'vm';
 
 
 // test('homepage has Playwright in title and get started link linking to the intro page', async ({ page }) => {
@@ -20,9 +21,9 @@ import { test, expect } from '@playwright/test';
 //   await expect(page).toHaveURL(/.*intro/);
 // });
 
-test('fail', async ({ page,  }) => {
-  
-  await .tracing.start({screenshots: true, snapshots: true});
+test('fail', async ({ page}) => {
+
+  //await isContext.tracing.start({screenshots: true, snapshots: true});
   // Go to https://www.timocom.de/
   await page.goto('https://www.timocom.de/');
   // Click [aria-label="Verweigern"]
